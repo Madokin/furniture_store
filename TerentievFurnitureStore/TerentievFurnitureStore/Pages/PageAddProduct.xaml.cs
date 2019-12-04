@@ -50,7 +50,7 @@ namespace TerentievFurnitureStore.Pages
                 error.AppendLine(Properties.Resources.ErrorProductName);
             if (!error.ToString().Equals(""))
             {
-                System.Windows.MessageBox.Show(Properties.Resources.ErrorSomethingWrong + "\n\n" + error, Properties.Resources.CaptionError,
+                MessageBox.Show(Properties.Resources.ErrorSomethingWrong + "\n\n" + error, Properties.Resources.CaptionError,
                     MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
@@ -67,7 +67,7 @@ namespace TerentievFurnitureStore.Pages
                         Weight = weight
                     };
                     AppData.context.Products.Add(product);
-                    System.Windows.MessageBox.Show(Properties.Resources.MessageSuccessfullAdd, Properties.Resources.CaptionSuccessfully,
+                    MessageBox.Show(Properties.Resources.MessageSuccessfullAdd, Properties.Resources.CaptionSuccessfully,
                         MessageBoxButton.OK, MessageBoxImage.Information);
                 }
                 else
@@ -75,7 +75,7 @@ namespace TerentievFurnitureStore.Pages
                     _cp.Name = TBxProductName.Text;
                     _cp.Date = (DateTime)DPProductionDate.SelectedDate;
                     _cp.Weight = weight;
-                    System.Windows.MessageBox.Show(Properties.Resources.MessageSuccessfullEdit, Properties.Resources.CaptionSuccessfully,
+                    MessageBox.Show(Properties.Resources.MessageSuccessfullEdit, Properties.Resources.CaptionSuccessfully,
                         MessageBoxButton.OK, MessageBoxImage.Information);
                 }
                 AppData.context.SaveChanges();
@@ -83,7 +83,7 @@ namespace TerentievFurnitureStore.Pages
             }
             catch (Exception ex)
             {
-                System.Windows.MessageBox.Show(Properties.Resources.ErrorUnspecified + ex.Message, Properties.Resources.CaptionError,
+                MessageBox.Show(Properties.Resources.ErrorUnspecified + ex.Message, Properties.Resources.CaptionError,
                     MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
