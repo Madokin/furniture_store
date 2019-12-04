@@ -120,6 +120,9 @@
   <data name="BtnAccept" xml:space="preserve">
     <value>Accept</value>
   </data>
+  <data name="BtnAdd" xml:space="preserve">
+    <value>Add</value>
+  </data>
   <data name="BtnBack" xml:space="preserve">
     <value>Back</value>
   </data>
@@ -150,6 +153,18 @@
   <data name="CaptionWarning" xml:space="preserve">
     <value>Warning!</value>
   </data>
+  <data name="DGProductId" xml:space="preserve">
+    <value>Product ID</value>
+  </data>
+  <data name="DGProductionDate" xml:space="preserve">
+    <value>Production date</value>
+  </data>
+  <data name="DGProductName" xml:space="preserve">
+    <value>Product name</value>
+  </data>
+  <data name="DGWeight" xml:space="preserve">
+    <value>Weight</value>
+  </data>
   <data name="ErrorInvalidLog" xml:space="preserve">
     <value>Invalid login or password!</value>
   </data>
@@ -159,8 +174,23 @@
   <data name="ErrorNotEterned" xml:space="preserve">
     <value>You have entered nothing!</value>
   </data>
+  <data name="ErrorProductionDate" xml:space="preserve">
+    <value>Field "Production date" is empty!</value>
+  </data>
+  <data name="ErrorProductName" xml:space="preserve">
+    <value>Field "Product name" is empty!</value>
+  </data>
+  <data name="ErrorSomethingWrong" xml:space="preserve">
+    <value>You entered something wrong!</value>
+  </data>
   <data name="ErrorUnspecified" xml:space="preserve">
     <value>Unspecified error!</value>
+  </data>
+  <data name="ErrorWeightEmpty" xml:space="preserve">
+    <value>Field "Weight" is empty!</value>
+  </data>
+  <data name="ErrorWeightFormat" xml:space="preserve">
+    <value>Field "Weight" have wrong format!</value>
   </data>
   <data name="MessageExit" xml:space="preserve">
     <value>Do you really want to log out?</value>
@@ -171,14 +201,41 @@
   <data name="MessageSuccessfullEdit" xml:space="preserve">
     <value>Successfully edited!</value>
   </data>
+  <data name="TextClient" xml:space="preserve">
+    <value>Client :</value>
+  </data>
+  <data name="TextDateOfSale" xml:space="preserve">
+    <value>Date of sale :</value>
+  </data>
+  <data name="TextFilterByDate" xml:space="preserve">
+    <value>Filter by date :</value>
+  </data>
   <data name="TextLanguage" xml:space="preserve">
     <value>Language :</value>
   </data>
   <data name="TextLogin" xml:space="preserve">
     <value>Login :</value>
   </data>
+  <data name="TextNullSearch" xml:space="preserve">
+    <value>Nothing found!</value>
+  </data>
   <data name="TextPassword" xml:space="preserve">
     <value>Password :</value>
+  </data>
+  <data name="TextProduct" xml:space="preserve">
+    <value>Product :</value>
+  </data>
+  <data name="TextProductionDate" xml:space="preserve">
+    <value>Production date :</value>
+  </data>
+  <data name="TextProductName" xml:space="preserve">
+    <value>Product name :</value>
+  </data>
+  <data name="TextSearchByProductName" xml:space="preserve">
+    <value>Search by product name :</value>
+  </data>
+  <data name="TextWeight" xml:space="preserve">
+    <value>Weight :</value>
   </data>
   <data name="TitleFurnitureStore" xml:space="preserve">
     <value>Furniture store "Home comfort"</value>

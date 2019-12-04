@@ -15,11 +15,11 @@ namespace TerentievFurnitureStore.Entities
     public partial class Sale
     {
         public int idSale { get; set; }
-        public Nullable<int> idClient { get; set; }
-        public Nullable<int> idProduct { get; set; }
-        public Nullable<System.DateTime> Data { get; set; }
-        public string Quantity { get; set; }
-        public Nullable<decimal> Price { get; set; }
+        public int idClient { get; set; }
+        public int idProduct { get; set; }
+        public System.DateTime DateOfSale { get; set; }
+        public int Quantity { get; set; }
+        public decimal Price { get; set; }
     
         public virtual Client Client { get; set; }
         public virtual Product Product { get; set; }

@@ -5,13 +5,13 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="97b50e6b5c3641d681ba7bad5bcd1bda" Name="Diagram1">
-        <EntityTypeShape EntityType="TerentievDataBaseModel.Client" Width="1.5" PointX="0.75" PointY="1.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="TerentievDataBaseModel.Product" Width="1.5" PointX="0.75" PointY="5.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="TerentievDataBaseModel.Sale" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="TerentievDataBaseModel.sysdiagram" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="TerentievDataBaseModel.User" Width="1.5" PointX="4.75" PointY="4.75" IsExpanded="true" />
-        <AssociationConnector Association="TerentievDataBaseModel.FK_Sale_Client" ManuallyRouted="false" />
-        <AssociationConnector Association="TerentievDataBaseModel.FK_Sale_Product" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="TerentievDataBaseModel.Client" Width="1.5" PointX="0.75" PointY="5.25" />
+        <EntityTypeShape EntityType="TerentievDataBaseModel.Product" Width="1.5" PointX="0.75" PointY="1.25" />
+        <EntityTypeShape EntityType="TerentievDataBaseModel.Sale" Width="1.5" PointX="3" PointY="1" />
+        <EntityTypeShape EntityType="TerentievDataBaseModel.sysdiagram" Width="1.5" PointX="2.75" PointY="4.75" />
+        <EntityTypeShape EntityType="TerentievDataBaseModel.User" Width="1.5" PointX="4.75" PointY="4.75" />
+        <AssociationConnector Association="TerentievDataBaseModel.FK_Sale_Client" />
+        <AssociationConnector Association="TerentievDataBaseModel.FK_Sale_Product" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -69,6 +69,24 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Pages\PageAddClient.xaml.cs">
+      <DependentUpon>PageAddClient.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PageAddProduct.xaml.cs">
+      <DependentUpon>PageAddProduct.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PageAddSale.xaml.cs">
+      <DependentUpon>PageAddSale.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PageClients.xaml.cs">
+      <DependentUpon>PageClients.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PageProducts.xaml.cs">
+      <DependentUpon>PageProducts.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PageSales.xaml.cs">
+      <DependentUpon>PageSales.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Resources.ru-Ru.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -77,11 +95,35 @@
     <Compile Include="Windows\WindowAddEdit.xaml.cs">
       <DependentUpon>WindowAddEdit.xaml</DependentUpon>
     </Compile>
+    <Page Include="Pages\PageAddClient.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PageAddProduct.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PageAddSale.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\PageAuthorization.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\PageClients.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\PageMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PageProducts.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PageSales.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

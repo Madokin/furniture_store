@@ -1,0 +1,51 @@
+﻿<Page x:Class="TerentievFurnitureStore.Pages.PageProducts"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TerentievFurnitureStore.Pages"
+      xmlns:prop ="clr-namespace:TerentievFurnitureStore.Properties"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PageProducts">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal">
+            <StackPanel Margin="10" HorizontalAlignment="Left" VerticalAlignment="Center" Orientation="Horizontal">
+                <TextBlock Text="{x:Static prop:Resources.TextSearchByProductName}" Style="{StaticResource TextBlockText}"/>
+                <TextBox Name="TBxSearch" TextChanged="TBxSearch_TextChanged"/>
+            </StackPanel>
+            <StackPanel Margin="120,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" Orientation="Horizontal">
+                <TextBlock Text="{x:Static prop:Resources.TextFilterByDate}" Style="{StaticResource TextBlockText}"/>
+                <DatePicker Name="DPSearch" SelectedDateChanged="DPSearch_SelectedDateChanged"/>
+            </StackPanel>
+        </StackPanel>
+        <TextBlock Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{StaticResource TextBlockText}" Text="{x:Static prop:Resources.TextNullSearch}" Foreground="#E54128"></TextBlock>
+        <DataGrid Name="DGProducts" AutoGenerateColumns="False" IsReadOnly="True" Grid.Row="1" Margin="10">
+            <DataGrid.Columns >
+                <DataGridTextColumn Header="{x:Static prop:Resources.DGProductId}" Width="*" Binding="{Binding idProduct}"/>
+                <DataGridTextColumn Header="{x:Static prop:Resources.DGProductName}" Width="*" Binding="{Binding Name}"/>
+                <DataGridTextColumn Header="{x:Static prop:Resources.DGProductionDate}" Width="*" Binding="{Binding Date}"/>
+                <DataGridTextColumn Header="{x:Static prop:Resources.DGWeight}" Width="*" Binding="{Binding Weight}"/>
+                <DataGridTemplateColumn Header="{x:Static prop:Resources.BtnEdit}" Width="1.7*">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Name="BtnEdit" Content="{x:Static prop:Resources.BtnEdit}" Width="auto" Click="BtnEdit_Click"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="{x:Static prop:Resources.BtnDelete}" Width="1.7*">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Name="BtnDelete" Content="{x:Static prop:Resources.BtnDelete}" Width="auto" Click="BtnDelete_Click"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Page>

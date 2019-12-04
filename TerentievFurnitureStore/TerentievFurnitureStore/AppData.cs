@@ -12,6 +12,6 @@ namespace TerentievFurnitureStore
         public static Entities.TerentievDataBaseEntities context = new Entities.TerentievDataBaseEntities();
         public static Frame mainFrame;
         public static Entities.User currentUser;
-        public static Windows.WindowAddEdit WindowAdd = new Windows.WindowAddEdit();
+        public static Windows.WindowAddEdit WindowAdd = new Windows.WindowAddEdit(null);
     }
 }

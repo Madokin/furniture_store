@@ -10,24 +10,19 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace TerentievFurnitureStore.Windows
+namespace TerentievFurnitureStore.Pages
 {
     /// <summary>
-    /// Interaction logic for WindowAddEdit.xaml
+    /// Interaction logic for PageAddClient.xaml
     /// </summary>
-    public partial class WindowAddEdit : Window
+    public partial class PageAddClient : Page
     {
-        public WindowAddEdit(Page page)
+        public PageAddClient()
         {
             InitializeComponent();
-            AddWindowFrame.Navigate(page);
-        }
-
-        public void CloseDialog()
-        {
-            DialogResult = true;
         }
     }
 }

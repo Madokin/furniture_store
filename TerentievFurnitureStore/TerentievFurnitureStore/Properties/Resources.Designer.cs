@@ -70,6 +70,15 @@ namespace TerentievFurnitureStore.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Add.
+        /// </summary>
+        public static string BtnAdd {
+            get {
+                return ResourceManager.GetString("BtnAdd", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Back.
         /// </summary>
         public static string BtnBack {
@@ -160,6 +169,42 @@ namespace TerentievFurnitureStore.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Product ID.
+        /// </summary>
+        public static string DGProductId {
+            get {
+                return ResourceManager.GetString("DGProductId", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Production date.
+        /// </summary>
+        public static string DGProductionDate {
+            get {
+                return ResourceManager.GetString("DGProductionDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Product name.
+        /// </summary>
+        public static string DGProductName {
+            get {
+                return ResourceManager.GetString("DGProductName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Weight.
+        /// </summary>
+        public static string DGWeight {
+            get {
+                return ResourceManager.GetString("DGWeight", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Invalid login or password!.
         /// </summary>
         public static string ErrorInvalidLog {
@@ -187,11 +232,56 @@ namespace TerentievFurnitureStore.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Field &quot;Production date&quot; is empty!.
+        /// </summary>
+        public static string ErrorProductionDate {
+            get {
+                return ResourceManager.GetString("ErrorProductionDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Field &quot;Product name&quot; is empty!.
+        /// </summary>
+        public static string ErrorProductName {
+            get {
+                return ResourceManager.GetString("ErrorProductName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You entered something wrong!.
+        /// </summary>
+        public static string ErrorSomethingWrong {
+            get {
+                return ResourceManager.GetString("ErrorSomethingWrong", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Unspecified error!.
         /// </summary>
         public static string ErrorUnspecified {
             get {
                 return ResourceManager.GetString("ErrorUnspecified", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Field &quot;Weight&quot; is empty!.
+        /// </summary>
+        public static string ErrorWeightEmpty {
+            get {
+                return ResourceManager.GetString("ErrorWeightEmpty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Field &quot;Weight&quot; have wrong format!.
+        /// </summary>
+        public static string ErrorWeightFormat {
+            get {
+                return ResourceManager.GetString("ErrorWeightFormat", resourceCulture);
             }
         }
         
@@ -223,6 +313,33 @@ namespace TerentievFurnitureStore.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Client :.
+        /// </summary>
+        public static string TextClient {
+            get {
+                return ResourceManager.GetString("TextClient", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Date of sale :.
+        /// </summary>
+        public static string TextDateOfSale {
+            get {
+                return ResourceManager.GetString("TextDateOfSale", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Filter by date :.
+        /// </summary>
+        public static string TextFilterByDate {
+            get {
+                return ResourceManager.GetString("TextFilterByDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Language :.
         /// </summary>
         public static string TextLanguage {
@@ -241,11 +358,65 @@ namespace TerentievFurnitureStore.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Nothing found!.
+        /// </summary>
+        public static string TextNullSearch {
+            get {
+                return ResourceManager.GetString("TextNullSearch", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Password :.
         /// </summary>
         public static string TextPassword {
             get {
                 return ResourceManager.GetString("TextPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Product :.
+        /// </summary>
+        public static string TextProduct {
+            get {
+                return ResourceManager.GetString("TextProduct", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Production date :.
+        /// </summary>
+        public static string TextProductionDate {
+            get {
+                return ResourceManager.GetString("TextProductionDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Product name :.
+        /// </summary>
+        public static string TextProductName {
+            get {
+                return ResourceManager.GetString("TextProductName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Search by product name :.
+        /// </summary>
+        public static string TextSearchByProductName {
+            get {
+                return ResourceManager.GetString("TextSearchByProductName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Weight :.
+        /// </summary>
+        public static string TextWeight {
+            get {
+                return ResourceManager.GetString("TextWeight", resourceCulture);
             }
         }
         
