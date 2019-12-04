@@ -1,0 +1,25 @@
+﻿<Window x:Class="TerentievFurnitureStore.Windows.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TerentievFurnitureStore.Windows"
+        xmlns:prop ="clr-namespace:TerentievFurnitureStore.Properties"
+        mc:Ignorable="d"
+        Title="{x:Static prop:Resources.TitleFurnitureStore}" Height="600" Width="800" MinHeight="650" MinWidth="850" Closed="Window_Closed">
+    <Grid Background="LightGreen">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="80"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="90"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+        <Image Margin="5" />
+        <Frame Name="MainFrame" Grid.Row="1" Background="#FF71A8DE" NavigationUIVisibility="Hidden" Grid.ColumnSpan="2" ContentRendered="MainFrame_ContentRendered"/>
+        <Button Grid.Column="1" HorizontalAlignment="Left" Name="BtnBack" Content="{x:Static prop:Resources.BtnBack}" Click="BtnBack_Click" Width="150"/>
+        <Button Grid.Column="1" HorizontalAlignment="Right" Name="BtnLogout" Content="{x:Static prop:Resources.BtnLogout}" Width="150" Click="BtnLogout_Click"/>
+    </Grid>
+</Window>
