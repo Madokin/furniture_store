@@ -186,6 +186,9 @@
   <data name="ErrorUnspecified" xml:space="preserve">
     <value>Unspecified error!</value>
   </data>
+  <data name="ErrorPhone" xml:space="preserve">
+    <value>The field "Phone" is not filled in or not completely filled in!</value>
+  </data>
   <data name="ErrorWeightEmpty" xml:space="preserve">
     <value>Field "Weight" is empty!</value>
   </data>
@@ -293,5 +296,32 @@
   </data>
   <data name="DGQuantity" xml:space="preserve">
     <value>Quantity</value>
+  </data>
+  <data name="TextAddress" xml:space="preserve">
+    <value>Address :</value>
+  </data>
+  <data name="ErrorAddress" xml:space="preserve">
+    <value>Field "Address" is empty!</value>
+  </data>
+  <data name="ErrorDateOfBirth" xml:space="preserve">
+    <value>Field "Date of birth" is empty!</value>
+  </data>
+  <data name="ErrorName" xml:space="preserve">
+    <value>Field "Name" is empty!</value>
+  </data>
+  <data name="TextDateOfBirth" xml:space="preserve">
+    <value>Date of birth :</value>
+  </data>
+  <data name="TextName" xml:space="preserve">
+    <value>Name :</value>
+  </data>
+  <data name="TextPhone" xml:space="preserve">
+    <value>Phone :</value>
+  </data>
+  <data name="TextPrice" xml:space="preserve">
+    <value>Price :</value>
+  </data>
+  <data name="TextQuantity" xml:space="preserve">
+    <value>Quantity :</value>
   </data>
 </root>

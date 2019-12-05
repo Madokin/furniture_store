@@ -258,6 +258,12 @@
   <data name="DGIdSale" xml:space="preserve">
     <value>Код продажи</value>
   </data>
+  <data name="DGName" xml:space="preserve">
+    <value>Имя</value>
+  </data>
+  <data name="DGPhone" xml:space="preserve">
+    <value>Телефон</value>
+  </data>
   <data name="DGPrice" xml:space="preserve">
     <value>Цена</value>
   </data>
@@ -266,5 +272,41 @@
   </data>
   <data name="DGQuantity" xml:space="preserve">
     <value>Количество</value>
+  </data>
+  <data name="ErrorAddress" xml:space="preserve">
+    <value>Поле "Адрес" пустое!</value>
+  </data>
+  <data name="ErrorDateOfBirth" xml:space="preserve">
+    <value>Поле "Дата рождения" пустое!</value>
+  </data>
+  <data name="ErrorName" xml:space="preserve">
+    <value>Поле "Имя" пустое!</value>
+  </data>
+  <data name="ErrorPhoneNumber" xml:space="preserve">
+    <value>Поле "Телефон" не заполнено или заполнено не до конца!</value>
+  </data>
+  <data name="TextDateOfBirth" xml:space="preserve">
+    <value>Дата рождения :</value>
+  </data>
+  <data name="TextName" xml:space="preserve">
+    <value>Имя :</value>
+  </data>
+  <data name="TextPhone" xml:space="preserve">
+    <value>Телефон :</value>
+  </data>
+  <data name="TextPrice" xml:space="preserve">
+    <value>Цена :</value>
+  </data>
+  <data name="TextProductionDate" xml:space="preserve">
+    <value>Дата производства :</value>
+  </data>
+  <data name="TextProductName" xml:space="preserve">
+    <value>Наименование товара :</value>
+  </data>
+  <data name="TextQuantity" xml:space="preserve">
+    <value>Количество :</value>
+  </data>
+  <data name="TextWeight" xml:space="preserve">
+    <value>Вес :</value>
   </data>
 </root>

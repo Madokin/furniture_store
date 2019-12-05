@@ -367,11 +367,38 @@ namespace TerentievFurnitureStore.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Field &quot;Address&quot; is empty!.
+        /// </summary>
+        public static string ErrorAddress {
+            get {
+                return ResourceManager.GetString("ErrorAddress", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Field &quot;Date of birth&quot; is empty!.
+        /// </summary>
+        public static string ErrorDateOfBirth {
+            get {
+                return ResourceManager.GetString("ErrorDateOfBirth", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Invalid login or password!.
         /// </summary>
         public static string ErrorInvalidLog {
             get {
                 return ResourceManager.GetString("ErrorInvalidLog", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Field &quot;Name&quot; is empty!.
+        /// </summary>
+        public static string ErrorName {
+            get {
+                return ResourceManager.GetString("ErrorName", resourceCulture);
             }
         }
         
@@ -390,6 +417,15 @@ namespace TerentievFurnitureStore.Properties {
         public static string ErrorNotEterned {
             get {
                 return ResourceManager.GetString("ErrorNotEterned", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The field &quot;Phone&quot; is not filled in or not completely filled in!.
+        /// </summary>
+        public static string ErrorPhone {
+            get {
+                return ResourceManager.GetString("ErrorPhone", resourceCulture);
             }
         }
         
@@ -475,11 +511,29 @@ namespace TerentievFurnitureStore.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Address :.
+        /// </summary>
+        public static string TextAddress {
+            get {
+                return ResourceManager.GetString("TextAddress", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Client :.
         /// </summary>
         public static string TextClient {
             get {
                 return ResourceManager.GetString("TextClient", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Date of birth :.
+        /// </summary>
+        public static string TextDateOfBirth {
+            get {
+                return ResourceManager.GetString("TextDateOfBirth", resourceCulture);
             }
         }
         
@@ -520,6 +574,15 @@ namespace TerentievFurnitureStore.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Name :.
+        /// </summary>
+        public static string TextName {
+            get {
+                return ResourceManager.GetString("TextName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Nothing found!.
         /// </summary>
         public static string TextNullSearch {
@@ -534,6 +597,24 @@ namespace TerentievFurnitureStore.Properties {
         public static string TextPassword {
             get {
                 return ResourceManager.GetString("TextPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Phone :.
+        /// </summary>
+        public static string TextPhone {
+            get {
+                return ResourceManager.GetString("TextPhone", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Price :.
+        /// </summary>
+        public static string TextPrice {
+            get {
+                return ResourceManager.GetString("TextPrice", resourceCulture);
             }
         }
         
@@ -561,6 +642,15 @@ namespace TerentievFurnitureStore.Properties {
         public static string TextProductName {
             get {
                 return ResourceManager.GetString("TextProductName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Quantity :.
+        /// </summary>
+        public static string TextQuantity {
+            get {
+                return ResourceManager.GetString("TextQuantity", resourceCulture);
             }
         }
         

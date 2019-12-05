@@ -10,6 +10,30 @@
       Title="PageAddSale">
 
     <Grid>
-        
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                    <TextBlock Text="{x:Static prop:Resources.TextClient}" Style="{StaticResource TextBlockText}"/>
+                    <ComboBox x:Name="CBxClient" DisplayMemberPath="Name"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                    <TextBlock Text="{x:Static prop:Resources.TextProduct}" Style="{StaticResource TextBlockText}"/>
+                    <ComboBox x:Name="CBxProduct" DisplayMemberPath="Name"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                    <TextBlock Text="{x:Static prop:Resources.TextDateOfSale}" Style="{StaticResource TextBlockText}"/>
+                    <DatePicker x:Name="DPDateOfSale" Width="150" Margin="5"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                    <TextBlock Text="{x:Static prop:Resources.TextQuantity}" Style="{StaticResource TextBlockText}"/>
+                    <TextBox x:Name="TBxQuantity" MaxLength="10" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                    <TextBlock Text="{x:Static prop:Resources.TextPrice}" Style="{StaticResource TextBlockText}"/>
+                    <TextBox x:Name="TBxPrice" MaxLength="10" />
+                </StackPanel>
+                <Button Name="BtnAddEdit" Width="220" Click="BtnAddEdit_Click"/>
+            </StackPanel>
+        </StackPanel>
     </Grid>
 </Page>

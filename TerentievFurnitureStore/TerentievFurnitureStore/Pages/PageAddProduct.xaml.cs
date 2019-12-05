@@ -26,6 +26,9 @@ namespace TerentievFurnitureStore.Pages
         {
             InitializeComponent();
             _cp = currentProduct;
+            TBxProductName.Text = _cp.Name;
+            DPProductionDate.SelectedDate = _cp.Date;
+            TBxWeight.Text = _cp.Weight.ToString();
             BtnAddEdit.Content = Properties.Resources.BtnEdit;
         }
 

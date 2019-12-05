@@ -11,18 +11,18 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="60"/>
+            <RowDefinition Height="70"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal">
-            <StackPanel Margin="10" HorizontalAlignment="Left" VerticalAlignment="Center" Orientation="Horizontal">
-                <TextBlock Text="{x:Static prop:Resources.TextSearchByProductName}" Style="{StaticResource TextBlockText}"/>
+            <StackPanel Margin="2" HorizontalAlignment="Left" VerticalAlignment="Center" Orientation="Horizontal">
+                <TextBlock Text="{x:Static prop:Resources.TextSearchByProductName}" Style="{StaticResource TextBlockText}" TextWrapping="Wrap" Width="120"/>
                 <TextBox Name="TBxSearch" TextChanged="TBxSearch_TextChanged"/>
             </StackPanel>
-            <StackPanel Margin="5,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" Orientation="Horizontal">
+            <StackPanel Margin="30,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" Orientation="Horizontal">
                 <TextBlock Text="{x:Static prop:Resources.TextFilterByDate}" Style="{StaticResource TextBlockText}"/>
                 <DatePicker Name="DPSearch" Width="150" SelectedDateChanged="DPSearch_SelectedDateChanged"/>
-                <Button Name="BtnResetFilter" Content="{x:Static prop:Resources.BtnResetFilter}" Width="150" Click="BtnResetFilter_Click"></Button>
+                <Button Name="BtnResetFilter" Content="{x:Static prop:Resources.BtnResetFilter}" Width="180" Click="BtnResetFilter_Click"></Button>
             </StackPanel>
         </StackPanel>
         <TextBlock Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{StaticResource TextBlockText}" Text="{x:Static prop:Resources.TextNullSearch}" Foreground="#E54128"></TextBlock>
