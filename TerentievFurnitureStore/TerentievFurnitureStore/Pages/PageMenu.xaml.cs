@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TerentievFurnitureStore.Windows;
 
 namespace TerentievFurnitureStore.Pages
 {
@@ -23,6 +24,42 @@ namespace TerentievFurnitureStore.Pages
         public PageMenu()
         {
             InitializeComponent();
+        }
+
+        private void BtnClients_Click(object sender, RoutedEventArgs e)
+        {
+            AppData.mainFrame.Navigate(new PageClients());
+        }
+
+        private void BtnProducts_Click(object sender, RoutedEventArgs e)
+        {
+            AppData.mainFrame.Navigate(new PageProducts());
+        }
+
+        private void BtnSales_Click(object sender, RoutedEventArgs e)
+        {
+            AppData.mainFrame.Navigate(new PageSales());
+        }
+
+        private void BtnAddClient_Click(object sender, RoutedEventArgs e)
+        {
+            OpenAddWindow(new PageAddClient());
+        }
+
+        private void BtnAddProduct_Click(object sender, RoutedEventArgs e)
+        {
+            OpenAddWindow(new PageAddProduct());
+        }
+
+        private void BtnAddSale_Click(object sender, RoutedEventArgs e)
+        {
+            OpenAddWindow(new PageAddSale());
+        }
+
+        void OpenAddWindow(Page page)
+        {
+            AppData.WindowAdd = new WindowAddEdit(page);
+            AppData.WindowAdd.ShowDialog();
         }
     }
 }

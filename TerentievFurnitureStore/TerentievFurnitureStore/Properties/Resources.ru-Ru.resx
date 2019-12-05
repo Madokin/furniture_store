@@ -219,4 +219,52 @@
   <data name="ErrorWeightFormat" xml:space="preserve">
     <value>Поле "Вес" имеет неправильный формат!</value>
   </data>
+  <data name="BtnAddClient" xml:space="preserve">
+    <value>Добавить клиента</value>
+  </data>
+  <data name="BtnAddProduct" xml:space="preserve">
+    <value>Добавить товар</value>
+  </data>
+  <data name="BtnAddSale" xml:space="preserve">
+    <value>Добавить продажу</value>
+  </data>
+  <data name="BtnClients" xml:space="preserve">
+    <value>Клиенты</value>
+  </data>
+  <data name="BtnProducts" xml:space="preserve">
+    <value>Товары</value>
+  </data>
+  <data name="BtnResetFilter" xml:space="preserve">
+    <value>Сбросить фильтрацию</value>
+  </data>
+  <data name="BtnSales" xml:space="preserve">
+    <value>Продажи</value>
+  </data>
+  <data name="DGAddress" xml:space="preserve">
+    <value>Адрес</value>
+  </data>
+  <data name="DGClient" xml:space="preserve">
+    <value>Клиент</value>
+  </data>
+  <data name="DGClientId" xml:space="preserve">
+    <value>Код клиента</value>
+  </data>
+  <data name="DGDateOfBirth" xml:space="preserve">
+    <value>Дата рождения</value>
+  </data>
+  <data name="DGDateOfSale" xml:space="preserve">
+    <value>Дата продажи</value>
+  </data>
+  <data name="DGIdSale" xml:space="preserve">
+    <value>Код продажи</value>
+  </data>
+  <data name="DGPrice" xml:space="preserve">
+    <value>Цена</value>
+  </data>
+  <data name="DGProduct" xml:space="preserve">
+    <value>Товар</value>
+  </data>
+  <data name="DGQuantity" xml:space="preserve">
+    <value>Количество</value>
+  </data>
 </root>

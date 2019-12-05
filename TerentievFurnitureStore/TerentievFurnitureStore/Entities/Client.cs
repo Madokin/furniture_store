@@ -22,6 +22,7 @@ namespace TerentievFurnitureStore.Entities
     
         public int idClient { get; set; }
         public string Name { get; set; }
+        public System.DateTime DateOfBirth { get; set; }
         public string Address { get; set; }
         public string Phone { get; set; }
     

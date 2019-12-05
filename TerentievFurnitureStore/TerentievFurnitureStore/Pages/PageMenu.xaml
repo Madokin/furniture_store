@@ -12,14 +12,14 @@
     <Grid>
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal">
             <StackPanel>
-                <Button Name="BtnRoutes"  Height="60" Width="300" Content="{x:Static prop:Resources.CaptionError}" TextBlock.FontSize="24" ></Button>
-                <Button Name="BtnHotels" Height="60" Width="300" Content="{x:Static prop:Resources.CaptionError}" TextBlock.FontSize="24" ></Button>
-                <Button Name="BtnUsers"  Height="60" Width="300" Content="{x:Static prop:Resources.CaptionError}" TextBlock.FontSize="24" ></Button>
+                <Button Name="BtnClients"  Height="60" Width="300" Content="{x:Static prop:Resources.BtnClients}" TextBlock.FontSize="24" Click="BtnClients_Click"></Button>
+                <Button Name="BtnProducts" Height="60" Width="300" Content="{x:Static prop:Resources.BtnProducts}" TextBlock.FontSize="24" Click="BtnProducts_Click"></Button>
+                <Button Name="BtnSales"  Height="60" Width="300" Content="{x:Static prop:Resources.BtnSales}" TextBlock.FontSize="24" Click="BtnSales_Click"></Button>
             </StackPanel>
             <StackPanel>
-                <Button Name="BtnAddRoute" Height="60" Width="300" Content="{x:Static prop:Resources.CaptionError}" TextBlock.FontSize="24" ></Button>
-                <Button Name="BtnAddHotel" Height="60" Width="300" Content="{x:Static prop:Resources.CaptionError}" TextBlock.FontSize="24" ></Button>
-                <Button Name="BtnAddUser" Height="60" Width="300" Content="{x:Static prop:Resources.CaptionError}" TextBlock.FontSize="24" ></Button>
+                <Button Name="BtnAddClient" Height="60" Width="300" Content="{x:Static prop:Resources.BtnAddClient}" TextBlock.FontSize="24" Click="BtnAddClient_Click"></Button>
+                <Button Name="BtnAddProduct" Height="60" Width="300" Content="{x:Static prop:Resources.BtnAddProduct}" TextBlock.FontSize="24" Click="BtnAddProduct_Click"></Button>
+                <Button Name="BtnAddSale" Height="60" Width="300" Content="{x:Static prop:Resources.BtnAddSale}" TextBlock.FontSize="24" Click="BtnAddSale_Click"></Button>
             </StackPanel>
         </StackPanel>
     </Grid>

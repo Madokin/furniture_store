@@ -240,4 +240,58 @@
   <data name="TitleFurnitureStore" xml:space="preserve">
     <value>Furniture store "Home comfort"</value>
   </data>
+  <data name="BtnAddClient" xml:space="preserve">
+    <value>Add client</value>
+  </data>
+  <data name="BtnAddProduct" xml:space="preserve">
+    <value>Add product</value>
+  </data>
+  <data name="BtnAddSale" xml:space="preserve">
+    <value>Add sale</value>
+  </data>
+  <data name="BtnClients" xml:space="preserve">
+    <value>Clients</value>
+  </data>
+  <data name="BtnProducts" xml:space="preserve">
+    <value>Products</value>
+  </data>
+  <data name="BtnResetFilter" xml:space="preserve">
+    <value>Reset filtering</value>
+  </data>
+  <data name="BtnSales" xml:space="preserve">
+    <value>Sales</value>
+  </data>
+  <data name="DGAddress" xml:space="preserve">
+    <value>Address</value>
+  </data>
+  <data name="DGClient" xml:space="preserve">
+    <value>Client</value>
+  </data>
+  <data name="DGClientId" xml:space="preserve">
+    <value>Client ID</value>
+  </data>
+  <data name="DGDateOfBirth" xml:space="preserve">
+    <value>Date of birth</value>
+  </data>
+  <data name="DGDateOfSale" xml:space="preserve">
+    <value>Date of sale</value>
+  </data>
+  <data name="DGIdSale" xml:space="preserve">
+    <value>Sale ID</value>
+  </data>
+  <data name="DGName" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="DGPhone" xml:space="preserve">
+    <value>Phone</value>
+  </data>
+  <data name="DGPrice" xml:space="preserve">
+    <value>Price</value>
+  </data>
+  <data name="DGProduct" xml:space="preserve">
+    <value>Product</value>
+  </data>
+  <data name="DGQuantity" xml:space="preserve">
+    <value>Quantity</value>
+  </data>
 </root>

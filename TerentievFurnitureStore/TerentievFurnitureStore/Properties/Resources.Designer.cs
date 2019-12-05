@@ -79,11 +79,47 @@ namespace TerentievFurnitureStore.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Add client.
+        /// </summary>
+        public static string BtnAddClient {
+            get {
+                return ResourceManager.GetString("BtnAddClient", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add product.
+        /// </summary>
+        public static string BtnAddProduct {
+            get {
+                return ResourceManager.GetString("BtnAddProduct", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add sale.
+        /// </summary>
+        public static string BtnAddSale {
+            get {
+                return ResourceManager.GetString("BtnAddSale", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Back.
         /// </summary>
         public static string BtnBack {
             get {
                 return ResourceManager.GetString("BtnBack", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Clients.
+        /// </summary>
+        public static string BtnClients {
+            get {
+                return ResourceManager.GetString("BtnClients", resourceCulture);
             }
         }
         
@@ -120,6 +156,33 @@ namespace TerentievFurnitureStore.Properties {
         public static string BtnLogout {
             get {
                 return ResourceManager.GetString("BtnLogout", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Products.
+        /// </summary>
+        public static string BtnProducts {
+            get {
+                return ResourceManager.GetString("BtnProducts", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reset filtering.
+        /// </summary>
+        public static string BtnResetFilter {
+            get {
+                return ResourceManager.GetString("BtnResetFilter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sales.
+        /// </summary>
+        public static string BtnSales {
+            get {
+                return ResourceManager.GetString("BtnSales", resourceCulture);
             }
         }
         
@@ -169,6 +232,96 @@ namespace TerentievFurnitureStore.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Address.
+        /// </summary>
+        public static string DGAddress {
+            get {
+                return ResourceManager.GetString("DGAddress", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Client.
+        /// </summary>
+        public static string DGClient {
+            get {
+                return ResourceManager.GetString("DGClient", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Client ID.
+        /// </summary>
+        public static string DGClientId {
+            get {
+                return ResourceManager.GetString("DGClientId", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Date of birth.
+        /// </summary>
+        public static string DGDateOfBirth {
+            get {
+                return ResourceManager.GetString("DGDateOfBirth", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Date of sale.
+        /// </summary>
+        public static string DGDateOfSale {
+            get {
+                return ResourceManager.GetString("DGDateOfSale", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sale ID.
+        /// </summary>
+        public static string DGIdSale {
+            get {
+                return ResourceManager.GetString("DGIdSale", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Name.
+        /// </summary>
+        public static string DGName {
+            get {
+                return ResourceManager.GetString("DGName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Phone.
+        /// </summary>
+        public static string DGPhone {
+            get {
+                return ResourceManager.GetString("DGPhone", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Price.
+        /// </summary>
+        public static string DGPrice {
+            get {
+                return ResourceManager.GetString("DGPrice", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Product.
+        /// </summary>
+        public static string DGProduct {
+            get {
+                return ResourceManager.GetString("DGProduct", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Product ID.
         /// </summary>
         public static string DGProductId {
@@ -192,6 +345,15 @@ namespace TerentievFurnitureStore.Properties {
         public static string DGProductName {
             get {
                 return ResourceManager.GetString("DGProductName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Quantity.
+        /// </summary>
+        public static string DGQuantity {
+            get {
+                return ResourceManager.GetString("DGQuantity", resourceCulture);
             }
         }
         

@@ -19,9 +19,10 @@
                 <TextBlock Text="{x:Static prop:Resources.TextSearchByProductName}" Style="{StaticResource TextBlockText}"/>
                 <TextBox Name="TBxSearch" TextChanged="TBxSearch_TextChanged"/>
             </StackPanel>
-            <StackPanel Margin="120,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" Orientation="Horizontal">
+            <StackPanel Margin="5,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" Orientation="Horizontal">
                 <TextBlock Text="{x:Static prop:Resources.TextFilterByDate}" Style="{StaticResource TextBlockText}"/>
-                <DatePicker Name="DPSearch" SelectedDateChanged="DPSearch_SelectedDateChanged"/>
+                <DatePicker Name="DPSearch" Width="150" SelectedDateChanged="DPSearch_SelectedDateChanged"/>
+                <Button Name="BtnResetFilter" Content="{x:Static prop:Resources.BtnResetFilter}" Width="150" Click="BtnResetFilter_Click"></Button>
             </StackPanel>
         </StackPanel>
         <TextBlock Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{StaticResource TextBlockText}" Text="{x:Static prop:Resources.TextNullSearch}" Foreground="#E54128"></TextBlock>

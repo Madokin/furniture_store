@@ -11,6 +11,7 @@
           </Key>
           <Property Name="idClient" Type="int" Nullable="false" />
           <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="DateOfBirth" Type="date" Nullable="false" />
           <Property Name="Address" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Phone" Type="nvarchar" MaxLength="20" Nullable="false" />
         </EntityType>
@@ -120,6 +121,7 @@
           </Key>
           <Property Name="idClient" Type="Int32" Nullable="false" />
           <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DateOfBirth" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="Address" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Phone" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Sales" Relationship="TerentievDataBaseModel.FK_Sale_Client" FromRole="Client" ToRole="Sale" />
@@ -204,6 +206,7 @@
               <MappingFragment StoreEntitySet="Client">
                 <ScalarProperty Name="Phone" ColumnName="Phone" />
                 <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="idClient" ColumnName="idClient" />
               </MappingFragment>

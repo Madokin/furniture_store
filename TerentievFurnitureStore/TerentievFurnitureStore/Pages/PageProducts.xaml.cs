@@ -78,5 +78,11 @@ namespace TerentievFurnitureStore.Pages
         {
             UpdateData();
         }
+
+        private void BtnResetFilter_Click(object sender, RoutedEventArgs e)
+        {
+            DPSearch.SelectedDate = null;
+            UpdateData();
+        }
     }
 }

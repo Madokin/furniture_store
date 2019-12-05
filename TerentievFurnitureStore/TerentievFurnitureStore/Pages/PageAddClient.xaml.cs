@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TerentievFurnitureStore.Entities;
 
 namespace TerentievFurnitureStore.Pages
 {
@@ -20,6 +21,13 @@ namespace TerentievFurnitureStore.Pages
     /// </summary>
     public partial class PageAddClient : Page
     {
+        Client _cc = null;
+        public PageAddClient(Client currentClient)
+        {
+            InitializeComponent();
+            _cc = currentClient;
+        }
+
         public PageAddClient()
         {
             InitializeComponent();
