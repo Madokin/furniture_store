@@ -7,7 +7,7 @@
       xmlns:local="clr-namespace:TerentievFurnitureStore.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="PageAddSale">
+      Title="PageAddSale" Loaded="Page_Loaded">
 
     <Grid>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -26,11 +26,11 @@
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                     <TextBlock Text="{x:Static prop:Resources.TextQuantity}" Style="{StaticResource TextBlockText}"/>
-                    <TextBox x:Name="TBxQuantity" MaxLength="10" />
+                    <TextBox x:Name="TBxQuantity" MaxLength="6" TextChanged="TBxQuantity_TextChanged"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                     <TextBlock Text="{x:Static prop:Resources.TextPrice}" Style="{StaticResource TextBlockText}"/>
-                    <TextBox x:Name="TBxPrice" MaxLength="10" />
+                    <TextBox x:Name="TBxPrice" MaxLength="10" TextChanged="TBxPrice_TextChanged"/>
                 </StackPanel>
                 <Button Name="BtnAddEdit" Width="220" Click="BtnAddEdit_Click"/>
             </StackPanel>

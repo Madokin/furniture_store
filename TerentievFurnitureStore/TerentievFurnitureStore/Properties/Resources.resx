@@ -324,4 +324,25 @@
   <data name="TextQuantity" xml:space="preserve">
     <value>Quantity :</value>
   </data>
+  <data name="ErrorClient" xml:space="preserve">
+    <value>Field "Client" have wrong format!</value>
+  </data>
+  <data name="ErrorDateOfSale" xml:space="preserve">
+    <value>Field "Date of sale" is empty!</value>
+  </data>
+  <data name="ErrorPriceEmpty" xml:space="preserve">
+    <value>Field "Price" is empty!</value>
+  </data>
+  <data name="ErrorPriceFormat" xml:space="preserve">
+    <value>Field "Price" have wrong format!</value>
+  </data>
+  <data name="ErrorProduct" xml:space="preserve">
+    <value>Field "Product" have wrong format!</value>
+  </data>
+  <data name="ErrorQuantityEmpty" xml:space="preserve">
+    <value>Field "Quantity" is empty!</value>
+  </data>
+  <data name="ErrorQuantityFormat" xml:space="preserve">
+    <value>Field "Quantity" have wrong format!</value>
+  </data>
 </root>

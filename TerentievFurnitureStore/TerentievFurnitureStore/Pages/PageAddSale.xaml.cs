@@ -26,16 +26,27 @@ namespace TerentievFurnitureStore.Pages
         {
             InitializeComponent();
             _cs = currentSale;
-            CBxClient.SelectedItem = _cs.Client;
-            CBxProduct.SelectedItem = _cs.Product;
-            DPDateOfSale.SelectedDate = _cs.DateOfSale;
-            TBxQuantity.Text = _cs.Quantity.ToString();
-            TBxPrice.Text = _cs.Price.ToString();
+            BtnAddEdit.Content = Properties.Resources.BtnEdit;
         }
 
         public PageAddSale()
         {
             InitializeComponent();
+            BtnAddEdit.Content = Properties.Resources.BtnAdd;
+        }
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            CBxClient.ItemsSource = AppData.context.Clients.ToList();
+            CBxProduct.ItemsSource = AppData.context.Products.ToList();
+            if (_cs != null)
+            {
+                CBxClient.SelectedItem = _cs.Client;
+                CBxProduct.SelectedItem = _cs.Product;
+                DPDateOfSale.SelectedDate = _cs.DateOfSale;
+                TBxQuantity.Text = _cs.Quantity.ToString();
+                TBxPrice.Text = _cs.Price.ToString();
+            }
         }
 
         private void BtnAddEdit_Click(object sender, RoutedEventArgs e)
@@ -44,21 +55,21 @@ namespace TerentievFurnitureStore.Pages
             decimal price = 0;
             int quantity = 0;
             if (!(CBxClient.SelectedItem is Client))
-                error.AppendLine(Properties.Resources.);
+                error.AppendLine(Properties.Resources.ErrorClient);
             if (!(CBxProduct.SelectedItem is Product))
-                error.AppendLine(Properties.Resources.);
+                error.AppendLine(Properties.Resources.ErrorProduct);
             if (DPDateOfSale.SelectedDate == null)
-                error.AppendLine(Properties.Resources.);
+                error.AppendLine(Properties.Resources.ErrorDateOfSale);
             if (string.IsNullOrWhiteSpace(TBxPrice.Text))
-                error.AppendLine(Properties.Resources.);
+                error.AppendLine(Properties.Resources.ErrorPriceEmpty);
             else
                 if (!decimal.TryParse(TBxPrice.Text, out price))
-                error.AppendLine(Properties.Resources.);
+                error.AppendLine(Properties.Resources.ErrorPriceFormat);
             if (string.IsNullOrWhiteSpace(TBxQuantity.Text))
-                error.AppendLine(Properties.Resources.);
+                error.AppendLine(Properties.Resources.ErrorQuantityEmpty);
             else
                  if (!int.TryParse(TBxQuantity.Text, out quantity))
-                error.AppendLine(Properties.Resources.);
+                error.AppendLine(Properties.Resources.ErrorQuantityFormat);
             if (!error.ToString().Equals(""))
             {
                 MessageBox.Show(Properties.Resources.ErrorSomethingWrong + "\n\n" + error, Properties.Resources.CaptionError,
@@ -68,24 +79,28 @@ namespace TerentievFurnitureStore.Pages
             try
             {
 
-                if (_cp == null)
+                if (_cs == null)
                 {
-                    Product product = new Product()
+                    Sale sale = new Sale()
                     {
-                        idProduct = AppData.context.Products.Max(p => p.idProduct) + 1,
-                        Name = TBxProductName.Text,
-                        Date = (DateTime)DPProductionDate.SelectedDate,
-                        Weight = weight
+                        idSale = AppData.context.Sales.Max(p => p.idSale) + 1,
+                        Client = CBxClient.SelectedItem as Client,
+                        Product = CBxClient.SelectedItem as Product,
+                        DateOfSale = (DateTime)DPDateOfSale.SelectedDate,
+                        Quantity = quantity,
+                        Price = price
                     };
-                    AppData.context.Products.Add(product);
+                    AppData.context.Sales.Add(sale);
                     MessageBox.Show(Properties.Resources.MessageSuccessfullAdd, Properties.Resources.CaptionSuccessfully,
                         MessageBoxButton.OK, MessageBoxImage.Information);
                 }
                 else
                 {
-                    _cp.Name = TBxProductName.Text;
-                    _cp.Date = (DateTime)DPProductionDate.SelectedDate;
-                    _cp.Weight = weight;
+                    _cs.Client = CBxClient.SelectedItem as Client;
+                    _cs.Product = CBxClient.SelectedItem as Product;
+                    _cs.DateOfSale = (DateTime)DPDateOfSale.SelectedDate;
+                    _cs.Quantity = quantity;
+                    _cs.Price = price;
                     MessageBox.Show(Properties.Resources.MessageSuccessfullEdit, Properties.Resources.CaptionSuccessfully,
                         MessageBoxButton.OK, MessageBoxImage.Information);
                 }
@@ -97,6 +112,38 @@ namespace TerentievFurnitureStore.Pages
                 MessageBox.Show(Properties.Resources.ErrorUnspecified + ex.Message, Properties.Resources.CaptionError,
                     MessageBoxButton.OK, MessageBoxImage.Error);
             }
+        }
+
+        private void TBxQuantity_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            string buf = "";
+            char[] array = (sender as TextBox).Text.ToCharArray();
+            foreach (var item in array)
+            {
+                if (Char.IsDigit(item))
+                    buf += item;
+            }
+            (sender as TextBox).Text = buf;
+            (sender as TextBox).SelectionStart = (sender as TextBox).Text.Length;
+        }
+
+        private void TBxPrice_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            string buf = "";
+            bool dot = true;
+            char[] array = (sender as TextBox).Text.ToCharArray();
+            foreach (var item in array)
+            {
+                if (Char.IsDigit(item))
+                    buf += item;
+                if (item == '.' && dot)
+                {
+                    buf += item;
+                    dot = false;
+                }
+            }
+            (sender as TextBox).Text = buf;
+            (sender as TextBox).SelectionStart = (sender as TextBox).Text.Length;
         }
     }
 }

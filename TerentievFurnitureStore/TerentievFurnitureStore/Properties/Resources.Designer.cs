@@ -376,11 +376,29 @@ namespace TerentievFurnitureStore.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Field &quot;Client&quot; have wrong format!.
+        /// </summary>
+        public static string ErrorClient {
+            get {
+                return ResourceManager.GetString("ErrorClient", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Field &quot;Date of birth&quot; is empty!.
         /// </summary>
         public static string ErrorDateOfBirth {
             get {
                 return ResourceManager.GetString("ErrorDateOfBirth", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Field &quot;Date of sale&quot; is empty!.
+        /// </summary>
+        public static string ErrorDateOfSale {
+            get {
+                return ResourceManager.GetString("ErrorDateOfSale", resourceCulture);
             }
         }
         
@@ -430,6 +448,33 @@ namespace TerentievFurnitureStore.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Field &quot;Price&quot; is empty!.
+        /// </summary>
+        public static string ErrorPriceEmpty {
+            get {
+                return ResourceManager.GetString("ErrorPriceEmpty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Field &quot;Price&quot; have wrong format!.
+        /// </summary>
+        public static string ErrorPriceFormat {
+            get {
+                return ResourceManager.GetString("ErrorPriceFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Field &quot;Product&quot; have wrong format!.
+        /// </summary>
+        public static string ErrorProduct {
+            get {
+                return ResourceManager.GetString("ErrorProduct", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Field &quot;Production date&quot; is empty!.
         /// </summary>
         public static string ErrorProductionDate {
@@ -444,6 +489,24 @@ namespace TerentievFurnitureStore.Properties {
         public static string ErrorProductName {
             get {
                 return ResourceManager.GetString("ErrorProductName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Field &quot;Quantity&quot; is empty!.
+        /// </summary>
+        public static string ErrorQuantityEmpty {
+            get {
+                return ResourceManager.GetString("ErrorQuantityEmpty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Field &quot;Quantity&quot; have wrong format!.
+        /// </summary>
+        public static string ErrorQuantityFormat {
+            get {
+                return ResourceManager.GetString("ErrorQuantityFormat", resourceCulture);
             }
         }
         

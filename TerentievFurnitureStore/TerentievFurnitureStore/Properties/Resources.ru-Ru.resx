@@ -309,4 +309,25 @@
   <data name="TextWeight" xml:space="preserve">
     <value>Вес :</value>
   </data>
+  <data name="ErrorClient" xml:space="preserve">
+    <value>Поле "Клиент" пустое!</value>
+  </data>
+  <data name="ErrorDateOfSale" xml:space="preserve">
+    <value>Поле "Дата продажи" пустое!</value>
+  </data>
+  <data name="ErrorPriceEmpty" xml:space="preserve">
+    <value>Поле "Цена" пустое!</value>
+  </data>
+  <data name="ErrorPriceFormat" xml:space="preserve">
+    <value>Поле "Цена" имеет неправильный формат!</value>
+  </data>
+  <data name="ErrorProduct" xml:space="preserve">
+    <value>Поле "Товар" имеет неправильный формат!</value>
+  </data>
+  <data name="ErrorQuantityEmpty" xml:space="preserve">
+    <value>Поле "Количество" пустое!</value>
+  </data>
+  <data name="ErrorQuantityFormat" xml:space="preserve">
+    <value>Поле "Количество" имеет неправильный формат!</value>
+  </data>
 </root>
