@@ -330,4 +330,22 @@
   <data name="ErrorQuantityFormat" xml:space="preserve">
     <value>Поле "Количество" имеет неправильный формат!</value>
   </data>
+  <data name="TextAddress" xml:space="preserve">
+    <value>Адрес :</value>
+  </data>
+  <data name="TextClient" xml:space="preserve">
+    <value>Клиент :</value>
+  </data>
+  <data name="TextDateOfSale" xml:space="preserve">
+    <value>Дата продажи :</value>
+  </data>
+  <data name="TextProduct" xml:space="preserve">
+    <value>Товар :</value>
+  </data>
+  <data name="TextSearchByName" xml:space="preserve">
+    <value>Поиск по имени :</value>
+  </data>
+  <data name="TextSearchByNameOrPN" xml:space="preserve">
+    <value>Поиск по имени или наименованию товара :</value>
+  </data>
 </root>

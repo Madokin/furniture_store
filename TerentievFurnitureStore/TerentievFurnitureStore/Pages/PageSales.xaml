@@ -11,12 +11,12 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="70"/>
+            <RowDefinition Height="85"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal">
             <StackPanel Margin="2" HorizontalAlignment="Left" VerticalAlignment="Center" Orientation="Horizontal">
-                <TextBlock Text="{x:Static prop:Resources.TextSearchByProductName}" Style="{StaticResource TextBlockText}" TextWrapping="Wrap" Width="120"/>
+                <TextBlock Text="{x:Static prop:Resources.TextSearchByNameOrPN}" Style="{StaticResource TextBlockText}" TextWrapping="Wrap" Width="120" TextAlignment="Center"/>
                 <TextBox Name="TBxSearch" TextChanged="TBxSearch_TextChanged"/>
             </StackPanel>
             <StackPanel Margin="30,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" Orientation="Horizontal">
@@ -28,11 +28,12 @@
         <TextBlock Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{StaticResource TextBlockText}" Text="{x:Static prop:Resources.TextNullSearch}" Foreground="#E54128"></TextBlock>
         <DataGrid Name="DGSales" AutoGenerateColumns="False" IsReadOnly="True" Grid.Row="1" Margin="10">
             <DataGrid.Columns >
-                <DataGridTextColumn Header="{x:Static prop:Resources.DGIdSale}" Width="auto" Binding="{Binding idClient}"/>
-                <DataGridTextColumn Header="{x:Static prop:Resources.DGClient}" Width="*" Binding="{Binding Name}"/>
-                <DataGridTextColumn Header="{x:Static prop:Resources.DGDateOfSale}" Width="auto" Binding="{Binding DateOfBirth}"/>
-                <DataGridTextColumn Header="{x:Static prop:Resources.DGQuantity}" Width="*" Binding="{Binding Address}"/>
-                <DataGridTextColumn Header="{x:Static prop:Resources.DGPrice}" Width="*" Binding="{Binding Phone}"/>
+                <DataGridTextColumn Header="{x:Static prop:Resources.DGIdSale}" Width="*" Binding="{Binding idClient}"/>
+                <DataGridTextColumn Header="{x:Static prop:Resources.DGClient}" Width="auto" Binding="{Binding Client.Name}"/>
+                <DataGridTextColumn Header="{x:Static prop:Resources.DGProduct}" Width="auto" Binding="{Binding Product.Name}"/>
+                <DataGridTextColumn Header="{x:Static prop:Resources.DGDateOfSale}" Width="auto" Binding="{Binding DateOfSale}"/>
+                <DataGridTextColumn Header="{x:Static prop:Resources.DGQuantity}" Width="auto" Binding="{Binding Quantity}"/>
+                <DataGridTextColumn Header="{x:Static prop:Resources.DGPrice}" Width="auto" Binding="{Binding Price}"/>
                 <DataGridTemplateColumn Header="{x:Static prop:Resources.BtnEdit}" Width="1.7*">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>

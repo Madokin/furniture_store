@@ -25,6 +25,7 @@ namespace TerentievFurnitureStore.Pages
         public PageClients()
         {
             InitializeComponent();
+            UpdateData();
         }
 
         private void BtnEdit_Click(object sender, RoutedEventArgs e)

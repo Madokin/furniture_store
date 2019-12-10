@@ -16,7 +16,7 @@
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal">
             <StackPanel Margin="5,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" Orientation="Horizontal">
-                <TextBlock Text="{x:Static prop:Resources.TextSearchByProductName}" Style="{StaticResource TextBlockText}" Width="120" TextWrapping="Wrap"/>
+                <TextBlock Text="{x:Static prop:Resources.TextSearchByProductName}" Style="{StaticResource TextBlockText}" Width="120" TextAlignment="Center" TextWrapping="Wrap"/>
                 <TextBox Name="TBxSearch" TextChanged="TBxSearch_TextChanged"/>
             </StackPanel>
             <StackPanel Margin="30,0,0,0" HorizontalAlignment="Right" VerticalAlignment="Center" Orientation="Horizontal">
@@ -29,9 +29,9 @@
         <DataGrid Name="DGProducts" AutoGenerateColumns="False" IsReadOnly="True" Grid.Row="1" Margin="10">
             <DataGrid.Columns >
                 <DataGridTextColumn Header="{x:Static prop:Resources.DGProductId}" Width="auto" Binding="{Binding idProduct}"/>
-                <DataGridTextColumn Header="{x:Static prop:Resources.DGProductName}" Width="*" Binding="{Binding Name}"/>
-                <DataGridTextColumn Header="{x:Static prop:Resources.DGProductionDate}" Width="*" Binding="{Binding Date}"/>
-                <DataGridTextColumn Header="{x:Static prop:Resources.DGWeight}" Width="auto" Binding="{Binding Weight}"/>
+                <DataGridTextColumn Header="{x:Static prop:Resources.DGProductName}" Width="auto" Binding="{Binding Name}"/>
+                <DataGridTextColumn Header="{x:Static prop:Resources.DGProductionDate}" Width="auto" Binding="{Binding Date}"/>
+                <DataGridTextColumn Header="{x:Static prop:Resources.DGWeight}" Width="*" Binding="{Binding Weight}"/>
                 <DataGridTemplateColumn Header="{x:Static prop:Resources.BtnEdit}" Width="1.7*">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>

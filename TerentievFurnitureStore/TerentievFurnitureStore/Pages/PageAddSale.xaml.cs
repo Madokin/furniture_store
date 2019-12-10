@@ -85,7 +85,7 @@ namespace TerentievFurnitureStore.Pages
                     {
                         idSale = AppData.context.Sales.Max(p => p.idSale) + 1,
                         Client = CBxClient.SelectedItem as Client,
-                        Product = CBxClient.SelectedItem as Product,
+                        Product = CBxProduct.SelectedItem as Product,
                         DateOfSale = (DateTime)DPDateOfSale.SelectedDate,
                         Quantity = quantity,
                         Price = price
@@ -97,7 +97,7 @@ namespace TerentievFurnitureStore.Pages
                 else
                 {
                     _cs.Client = CBxClient.SelectedItem as Client;
-                    _cs.Product = CBxClient.SelectedItem as Product;
+                    _cs.Product = CBxProduct.SelectedItem as Product;
                     _cs.DateOfSale = (DateTime)DPDateOfSale.SelectedDate;
                     _cs.Quantity = quantity;
                     _cs.Price = price;

@@ -718,6 +718,24 @@ namespace TerentievFurnitureStore.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Search by name :.
+        /// </summary>
+        public static string TextSearchByName {
+            get {
+                return ResourceManager.GetString("TextSearchByName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Search by name or product name :.
+        /// </summary>
+        public static string TextSearchByNameOrPN {
+            get {
+                return ResourceManager.GetString("TextSearchByNameOrPN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Search by product name :.
         /// </summary>
         public static string TextSearchByProductName {

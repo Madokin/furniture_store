@@ -345,4 +345,10 @@
   <data name="ErrorQuantityFormat" xml:space="preserve">
     <value>Field "Quantity" have wrong format!</value>
   </data>
+  <data name="TextSearchByName" xml:space="preserve">
+    <value>Search by name :</value>
+  </data>
+  <data name="TextSearchByNameOrPN" xml:space="preserve">
+    <value>Search by name or product name :</value>
+  </data>
 </root>

@@ -16,7 +16,7 @@
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal">
             <StackPanel Margin="1" HorizontalAlignment="Left" VerticalAlignment="Center" Orientation="Horizontal" >
-                <TextBlock Text="{x:Static prop:Resources.TextSearchByProductName}" Style="{StaticResource TextBlockText}" TextWrapping="Wrap" Width="120"/>
+                <TextBlock Text="{x:Static prop:Resources.TextSearchByName}" Style="{StaticResource TextBlockText}" TextWrapping="Wrap" TextAlignment="Center" Width="120"/>
                 <TextBox Name="TBxSearch" TextChanged="TBxSearch_TextChanged"/>
             </StackPanel>
             <StackPanel Margin="30,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" Orientation="Horizontal">
@@ -28,11 +28,11 @@
         <TextBlock Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{StaticResource TextBlockText}" Text="{x:Static prop:Resources.TextNullSearch}" Foreground="#E54128"></TextBlock>
         <DataGrid Name="DGClients" AutoGenerateColumns="False" IsReadOnly="True" Grid.Row="1" Margin="10">
             <DataGrid.Columns >
-                <DataGridTextColumn Header="{x:Static prop:Resources.DGClientId}" Width="auto" Binding="{Binding idClient}"/>
-                <DataGridTextColumn Header="{x:Static prop:Resources.DGName}" Width="*" Binding="{Binding Name}"/>
+                <DataGridTextColumn Header="{x:Static prop:Resources.DGClientId}" Width="*" Binding="{Binding idClient}"/>
+                <DataGridTextColumn Header="{x:Static prop:Resources.DGName}" Width="auto" Binding="{Binding Name}"/>
                 <DataGridTextColumn Header="{x:Static prop:Resources.DGDateOfBirth}" Width="auto" Binding="{Binding DateOfBirth}"/>
-                <DataGridTextColumn Header="{x:Static prop:Resources.DGAddress}" Width="*" Binding="{Binding Address}"/>
-                <DataGridTextColumn Header="{x:Static prop:Resources.DGPhone}" Width="*" Binding="{Binding Phone}"/>
+                <DataGridTextColumn Header="{x:Static prop:Resources.DGAddress}" Width="auto" Binding="{Binding Address}"/>
+                <DataGridTextColumn Header="{x:Static prop:Resources.DGPhone}" Width="auto" Binding="{Binding Phone}"/>
                 <DataGridTemplateColumn Header="{x:Static prop:Resources.BtnEdit}" Width="1.7*">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>

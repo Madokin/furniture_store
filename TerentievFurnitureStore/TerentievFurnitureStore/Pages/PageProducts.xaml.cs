@@ -25,7 +25,7 @@ namespace TerentievFurnitureStore.Pages
         public PageProducts()
         {
             InitializeComponent();
-            DGProducts.ItemsSource = AppData.context.Products.ToList();
+            UpdateData();
         }
 
         private void BtnEdit_Click(object sender, RoutedEventArgs e)
@@ -45,7 +45,7 @@ namespace TerentievFurnitureStore.Pages
             var products = AppData.context.Products.ToList();
             if (DPSearch.SelectedDate !=null)
             {
-                products = products.Where(p => p.Date == DPSearch.SelectedDate).ToList();
+                products = products.Where(p => p.Date == DPSearch.SelectedDate.Value.Date).ToList();
             }
             if (!TBxSearch.Text.Equals(""))
                 products = products.Where(p => p.Name.ToLower().Contains(TBxSearch.Text.ToLower())).ToList();
