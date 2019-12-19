@@ -5,12 +5,18 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="97b50e6b5c3641d681ba7bad5bcd1bda" Name="Diagram1">
-        <EntityTypeShape EntityType="TerentievDataBaseModel.Client" Width="1.5" PointX="0.75" PointY="1.125" />
-        <EntityTypeShape EntityType="TerentievDataBaseModel.Product" Width="1.5" PointX="0.75" PointY="5.25" />
-        <EntityTypeShape EntityType="TerentievDataBaseModel.Sale" Width="1.5" PointX="3" PointY="1" />
-        <EntityTypeShape EntityType="TerentievDataBaseModel.sysdiagram" Width="1.5" PointX="2.75" PointY="4.75" />
-        <EntityTypeShape EntityType="TerentievDataBaseModel.User" Width="1.5" PointX="4.75" PointY="4.75" />
+        <EntityTypeShape EntityType="TerentievDataBaseModel.Client" Width="1.5" PointX="2.75" PointY="7.25" />
+        <EntityTypeShape EntityType="TerentievDataBaseModel.Delivery" Width="1.5" PointX="3" PointY="3.625" />
+        <EntityTypeShape EntityType="TerentievDataBaseModel.Gender" Width="1.5" PointX="0.5" PointY="7.75" />
+        <EntityTypeShape EntityType="TerentievDataBaseModel.Product" Width="1.5" PointX="0.75" PointY="3.625" />
+        <EntityTypeShape EntityType="TerentievDataBaseModel.Provider" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="TerentievDataBaseModel.Sale" Width="1.5" PointX="6" PointY="3.5" />
+        <EntityTypeShape EntityType="TerentievDataBaseModel.sysdiagram" Width="1.5" PointX="4.75" PointY="6.375" />
+        <EntityTypeShape EntityType="TerentievDataBaseModel.User" Width="1.5" PointX="6.75" PointY="6.375" />
+        <AssociationConnector Association="TerentievDataBaseModel.FK_Client_Gender" />
         <AssociationConnector Association="TerentievDataBaseModel.FK_Sale_Client" />
+        <AssociationConnector Association="TerentievDataBaseModel.FK_Deliveries_Product" />
+        <AssociationConnector Association="TerentievDataBaseModel.FK_Deliveries_Provider1" />
         <AssociationConnector Association="TerentievDataBaseModel.FK_Sale_Product" />
       </Diagram>
     </edmx:Diagrams>

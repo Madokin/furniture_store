@@ -50,10 +50,24 @@ namespace TerentievFurnitureStore.Pages
             if (!TBxSearch.Text.Equals(""))
                 products = products.Where(p => p.Name.ToLower().Contains(TBxSearch.Text.ToLower())).ToList();
             if (products.Count == 0)
-                DGProducts.Visibility = Visibility.Hidden;
+            {
+                TBNothing.Visibility = Visibility.Visible;
+                SVDataGrid.Visibility = Visibility.Hidden;
+            }
             else
-                DGProducts.Visibility = Visibility.Visible;
-            DGProducts.ItemsSource = products;
+            {
+                TBNothing.Visibility = Visibility.Hidden;
+                SVDataGrid.Visibility = Visibility.Visible;
+                DGProducts.ItemsSource = products;
+            }
+            if (products.Count > 6)
+            {
+                SVDataGrid.VerticalScrollBarVisibility = ScrollBarVisibility.Visible;
+            }
+            else
+            {
+                SVDataGrid.VerticalScrollBarVisibility = ScrollBarVisibility.Hidden;
+            }
         }
 
         private void Page_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
@@ -82,6 +96,13 @@ namespace TerentievFurnitureStore.Pages
         private void BtnResetFilter_Click(object sender, RoutedEventArgs e)
         {
             DPSearch.SelectedDate = null;
+            UpdateData();
+        }
+
+        private void BtnAddProduct_Click(object sender, RoutedEventArgs e)
+        {
+            AppData.WindowAdd = new WindowAddEdit(new PageAddProduct());
+            AppData.WindowAdd.ShowDialog();
             UpdateData();
         }
     }

@@ -6,13 +6,14 @@
       xmlns:local="clr-namespace:TerentievFurnitureStore.Pages"
       xmlns:prop ="clr-namespace:TerentievFurnitureStore.Properties"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="450" d:DesignWidth="850"
       Title="PageClients">
 
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="70"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="70"/>
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal">
             <StackPanel Margin="1" HorizontalAlignment="Left" VerticalAlignment="Center" Orientation="Horizontal" >
@@ -21,33 +22,37 @@
             </StackPanel>
             <StackPanel Margin="30,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" Orientation="Horizontal">
                 <TextBlock Text="{x:Static prop:Resources.TextFilterByDate}" Style="{StaticResource TextBlockText}"/>
-                <DatePicker Name="DPSearch" Width="150" SelectedDateChanged="DPSearch_SelectedDateChanged"/>
+                <ComboBox Name="CBxSearch" Width="150" SelectionChanged="CBxSearch_SelectionChanged"/>
                 <Button Name="BtnResetFilter" Content="{x:Static prop:Resources.BtnResetFilter}" Width="180" Click="BtnResetFilter_Click"></Button>
             </StackPanel>
         </StackPanel>
-        <TextBlock Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{StaticResource TextBlockText}" Text="{x:Static prop:Resources.TextNullSearch}" Foreground="#E54128"></TextBlock>
-        <DataGrid Name="DGClients" AutoGenerateColumns="False" IsReadOnly="True" Grid.Row="1" Margin="10">
-            <DataGrid.Columns >
-                <DataGridTextColumn Header="{x:Static prop:Resources.DGClientId}" Width="*" Binding="{Binding idClient}"/>
-                <DataGridTextColumn Header="{x:Static prop:Resources.DGName}" Width="auto" Binding="{Binding Name}"/>
-                <DataGridTextColumn Header="{x:Static prop:Resources.DGDateOfBirth}" Width="auto" Binding="{Binding DateOfBirth}"/>
-                <DataGridTextColumn Header="{x:Static prop:Resources.DGAddress}" Width="auto" Binding="{Binding Address}"/>
-                <DataGridTextColumn Header="{x:Static prop:Resources.DGPhone}" Width="auto" Binding="{Binding Phone}"/>
-                <DataGridTemplateColumn Header="{x:Static prop:Resources.BtnEdit}" Width="1.7*">
-                    <DataGridTemplateColumn.CellTemplate>
-                        <DataTemplate>
-                            <Button Name="BtnEdit" Content="{x:Static prop:Resources.BtnEdit}" Width="auto" Click="BtnEdit_Click"/>
-                        </DataTemplate>
-                    </DataGridTemplateColumn.CellTemplate>
-                </DataGridTemplateColumn>
-                <DataGridTemplateColumn Header="{x:Static prop:Resources.BtnDelete}" Width="1.7*">
-                    <DataGridTemplateColumn.CellTemplate>
-                        <DataTemplate>
-                            <Button Name="BtnDelete" Content="{x:Static prop:Resources.BtnDelete}" Width="auto" Click="BtnDelete_Click"/>
-                        </DataTemplate>
-                    </DataGridTemplateColumn.CellTemplate>
-                </DataGridTemplateColumn>
-            </DataGrid.Columns>
-        </DataGrid>
+        <TextBlock Name="TBNothing" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{StaticResource TextBlockText}" Text="{x:Static prop:Resources.TextNullSearch}" Foreground="#E54128"></TextBlock>
+        <ScrollViewer Grid.Row="1" Margin="10" Name="SVDataGrid">
+            <DataGrid Name="DGClients" AutoGenerateColumns="False" IsReadOnly="True" >
+                <DataGrid.Columns >
+                    <DataGridTextColumn Header="{x:Static prop:Resources.DGClientId}" Width="*" Binding="{Binding idClient}"/>
+                    <DataGridTextColumn Header="{x:Static prop:Resources.DGName}" Width="auto" Binding="{Binding Name}"/>
+                    <DataGridTextColumn Header="{x:Static prop:Resources.DGGender}" Width="auto" Binding="{Binding Gender.GenderName}"/>
+                    <DataGridTextColumn Header="{x:Static prop:Resources.DGDateOfBirth}" Width="auto" Binding="{Binding DateOfBirth}"/>
+                    <DataGridTextColumn Header="{x:Static prop:Resources.DGAddress}" Width="auto" Binding="{Binding Address}"/>
+                    <DataGridTextColumn Header="{x:Static prop:Resources.DGPhone}" Width="auto" Binding="{Binding Phone}"/>
+                    <DataGridTemplateColumn Header="{x:Static prop:Resources.BtnEdit}" Width="auto">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Name="BtnEdit" Content="{x:Static prop:Resources.BtnEdit}" Width="150" Click="BtnEdit_Click"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTemplateColumn Header="{x:Static prop:Resources.BtnDelete}" Width="auto">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Name="BtnDelete" Content="{x:Static prop:Resources.BtnDelete}" Width="150" Click="BtnDelete_Click"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+        </ScrollViewer>
+        <Button Name="BtnAddClient" Height="60" Width="300" Content="{x:Static prop:Resources.BtnAddClient}" TextBlock.FontSize="24" Click="BtnAddClient_Click" Grid.Row="2"></Button>
     </Grid>
 </Page>

@@ -348,4 +348,16 @@
   <data name="TextSearchByNameOrPN" xml:space="preserve">
     <value>Поиск по имени или наименованию товара :</value>
   </data>
+  <data name="DGGender" xml:space="preserve">
+    <value>Пол</value>
+  </data>
+  <data name="TextGender" xml:space="preserve">
+    <value>Пол :</value>
+  </data>
+  <data name="BtnGenerate" xml:space="preserve">
+    <value>Сгенерировать</value>
+  </data>
+  <data name="BtnPrint" xml:space="preserve">
+    <value>Печать</value>
+  </data>
 </root>

@@ -11,9 +11,26 @@
           </Key>
           <Property Name="idClient" Type="int" Nullable="false" />
           <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="idGender" Type="int" Nullable="false" />
           <Property Name="DateOfBirth" Type="date" Nullable="false" />
           <Property Name="Address" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Phone" Type="nvarchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Deliveries">
+          <Key>
+            <PropertyRef Name="idDeliveries" />
+          </Key>
+          <Property Name="idDeliveries" Type="int" Nullable="false" />
+          <Property Name="idProvider" Type="int" Nullable="false" />
+          <Property Name="idProduct" Type="int" Nullable="false" />
+          <Property Name="DateOfDeliveries" Type="date" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Gender">
+          <Key>
+            <PropertyRef Name="idGender" />
+          </Key>
+          <Property Name="idGender" Type="int" Nullable="false" />
+          <Property Name="GenderName" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <EntityType Name="Product">
           <Key>
@@ -23,6 +40,15 @@
           <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Date" Type="date" Nullable="false" />
           <Property Name="Weight" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Provider">
+          <Key>
+            <PropertyRef Name="idProvider" />
+          </Key>
+          <Property Name="idProvider" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Address" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <EntityType Name="Sale">
           <Key>
@@ -53,6 +79,42 @@
           <Property Name="Login" Type="varchar" MaxLength="50" />
           <Property Name="Password" Type="varchar" MaxLength="50" />
         </EntityType>
+        <Association Name="FK_Client_Gender">
+          <End Role="Gender" Type="Self.Gender" Multiplicity="1" />
+          <End Role="Client" Type="Self.Client" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Gender">
+              <PropertyRef Name="idGender" />
+            </Principal>
+            <Dependent Role="Client">
+              <PropertyRef Name="idGender" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Deliveries_Product">
+          <End Role="Product" Type="Self.Product" Multiplicity="1" />
+          <End Role="Deliveries" Type="Self.Deliveries" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="idProduct" />
+            </Principal>
+            <Dependent Role="Deliveries">
+              <PropertyRef Name="idProduct" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Deliveries_Provider1">
+          <End Role="Provider" Type="Self.Provider" Multiplicity="1" />
+          <End Role="Deliveries" Type="Self.Deliveries" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Provider">
+              <PropertyRef Name="idProvider" />
+            </Principal>
+            <Dependent Role="Deliveries">
+              <PropertyRef Name="idProvider" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Sale_Client">
           <End Role="Client" Type="Self.Client" Multiplicity="1">
             <OnDelete Action="Cascade" />
@@ -83,10 +145,25 @@
         </Association>
         <EntityContainer Name="TerentievDataBaseModelStoreContainer">
           <EntitySet Name="Client" EntityType="Self.Client" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Deliveries" EntityType="Self.Deliveries" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Gender" EntityType="Self.Gender" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Product" EntityType="Self.Product" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Provider" EntityType="Self.Provider" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Sale" EntityType="Self.Sale" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Client_Gender" Association="Self.FK_Client_Gender">
+            <End Role="Gender" EntitySet="Gender" />
+            <End Role="Client" EntitySet="Client" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Deliveries_Product" Association="Self.FK_Deliveries_Product">
+            <End Role="Product" EntitySet="Product" />
+            <End Role="Deliveries" EntitySet="Deliveries" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Deliveries_Provider1" Association="Self.FK_Deliveries_Provider1">
+            <End Role="Provider" EntitySet="Provider" />
+            <End Role="Deliveries" EntitySet="Deliveries" />
+          </AssociationSet>
           <AssociationSet Name="FK_Sale_Client" Association="Self.FK_Sale_Client">
             <End Role="Client" EntitySet="Client" />
             <End Role="Sale" EntitySet="Sale" />
@@ -102,13 +179,28 @@
       <Schema Namespace="TerentievDataBaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityContainer Name="TerentievDataBaseEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Clients" EntityType="TerentievDataBaseModel.Client" />
+          <EntitySet Name="Deliveries" EntityType="TerentievDataBaseModel.Delivery" />
+          <EntitySet Name="Genders" EntityType="TerentievDataBaseModel.Gender" />
           <EntitySet Name="Products" EntityType="TerentievDataBaseModel.Product" />
+          <EntitySet Name="Providers" EntityType="TerentievDataBaseModel.Provider" />
           <EntitySet Name="Sales" EntityType="TerentievDataBaseModel.Sale" />
           <EntitySet Name="sysdiagrams" EntityType="TerentievDataBaseModel.sysdiagram" />
           <EntitySet Name="Users" EntityType="TerentievDataBaseModel.User" />
+          <AssociationSet Name="FK_Client_Gender" Association="TerentievDataBaseModel.FK_Client_Gender">
+            <End Role="Gender" EntitySet="Genders" />
+            <End Role="Client" EntitySet="Clients" />
+          </AssociationSet>
           <AssociationSet Name="FK_Sale_Client" Association="TerentievDataBaseModel.FK_Sale_Client">
             <End Role="Client" EntitySet="Clients" />
             <End Role="Sale" EntitySet="Sales" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Deliveries_Product" Association="TerentievDataBaseModel.FK_Deliveries_Product">
+            <End Role="Product" EntitySet="Products" />
+            <End Role="Delivery" EntitySet="Deliveries" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Deliveries_Provider1" Association="TerentievDataBaseModel.FK_Deliveries_Provider1">
+            <End Role="Provider" EntitySet="Providers" />
+            <End Role="Delivery" EntitySet="Deliveries" />
           </AssociationSet>
           <AssociationSet Name="FK_Sale_Product" Association="TerentievDataBaseModel.FK_Sale_Product">
             <End Role="Product" EntitySet="Products" />
@@ -121,10 +213,31 @@
           </Key>
           <Property Name="idClient" Type="Int32" Nullable="false" />
           <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="idGender" Type="Int32" Nullable="false" />
           <Property Name="DateOfBirth" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="Address" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Phone" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Gender" Relationship="TerentievDataBaseModel.FK_Client_Gender" FromRole="Client" ToRole="Gender" />
           <NavigationProperty Name="Sales" Relationship="TerentievDataBaseModel.FK_Sale_Client" FromRole="Client" ToRole="Sale" />
+        </EntityType>
+        <EntityType Name="Delivery">
+          <Key>
+            <PropertyRef Name="idDeliveries" />
+          </Key>
+          <Property Name="idDeliveries" Type="Int32" Nullable="false" />
+          <Property Name="idProvider" Type="Int32" Nullable="false" />
+          <Property Name="idProduct" Type="Int32" Nullable="false" />
+          <Property Name="DateOfDeliveries" Type="DateTime" Nullable="false" Precision="0" />
+          <NavigationProperty Name="Product" Relationship="TerentievDataBaseModel.FK_Deliveries_Product" FromRole="Delivery" ToRole="Product" />
+          <NavigationProperty Name="Provider" Relationship="TerentievDataBaseModel.FK_Deliveries_Provider1" FromRole="Delivery" ToRole="Provider" />
+        </EntityType>
+        <EntityType Name="Gender">
+          <Key>
+            <PropertyRef Name="idGender" />
+          </Key>
+          <Property Name="idGender" Type="Int32" Nullable="false" />
+          <Property Name="GenderName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Clients" Relationship="TerentievDataBaseModel.FK_Client_Gender" FromRole="Gender" ToRole="Client" />
         </EntityType>
         <EntityType Name="Product">
           <Key>
@@ -134,7 +247,18 @@
           <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="Weight" Type="Double" Nullable="false" />
+          <NavigationProperty Name="Deliveries" Relationship="TerentievDataBaseModel.FK_Deliveries_Product" FromRole="Product" ToRole="Delivery" />
           <NavigationProperty Name="Sales" Relationship="TerentievDataBaseModel.FK_Sale_Product" FromRole="Product" ToRole="Sale" />
+        </EntityType>
+        <EntityType Name="Provider">
+          <Key>
+            <PropertyRef Name="idProvider" />
+          </Key>
+          <Property Name="idProvider" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Deliveries" Relationship="TerentievDataBaseModel.FK_Deliveries_Provider1" FromRole="Provider" ToRole="Delivery" />
         </EntityType>
         <EntityType Name="Sale">
           <Key>
@@ -167,6 +291,18 @@
           <Property Name="Login" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
+        <Association Name="FK_Client_Gender">
+          <End Type="TerentievDataBaseModel.Gender" Role="Gender" Multiplicity="1" />
+          <End Type="TerentievDataBaseModel.Client" Role="Client" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Gender">
+              <PropertyRef Name="idGender" />
+            </Principal>
+            <Dependent Role="Client">
+              <PropertyRef Name="idGender" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Sale_Client">
           <End Type="TerentievDataBaseModel.Client" Role="Client" Multiplicity="1">
             <OnDelete Action="Cascade" />
@@ -178,6 +314,30 @@
             </Principal>
             <Dependent Role="Sale">
               <PropertyRef Name="idClient" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Deliveries_Product">
+          <End Type="TerentievDataBaseModel.Product" Role="Product" Multiplicity="1" />
+          <End Type="TerentievDataBaseModel.Delivery" Role="Delivery" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="idProduct" />
+            </Principal>
+            <Dependent Role="Delivery">
+              <PropertyRef Name="idProduct" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Deliveries_Provider1">
+          <End Type="TerentievDataBaseModel.Provider" Role="Provider" Multiplicity="1" />
+          <End Type="TerentievDataBaseModel.Delivery" Role="Delivery" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Provider">
+              <PropertyRef Name="idProvider" />
+            </Principal>
+            <Dependent Role="Delivery">
+              <PropertyRef Name="idProvider" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -207,8 +367,27 @@
                 <ScalarProperty Name="Phone" ColumnName="Phone" />
                 <ScalarProperty Name="Address" ColumnName="Address" />
                 <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+                <ScalarProperty Name="idGender" ColumnName="idGender" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="idClient" ColumnName="idClient" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Deliveries">
+            <EntityTypeMapping TypeName="TerentievDataBaseModel.Delivery">
+              <MappingFragment StoreEntitySet="Deliveries">
+                <ScalarProperty Name="DateOfDeliveries" ColumnName="DateOfDeliveries" />
+                <ScalarProperty Name="idProduct" ColumnName="idProduct" />
+                <ScalarProperty Name="idProvider" ColumnName="idProvider" />
+                <ScalarProperty Name="idDeliveries" ColumnName="idDeliveries" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Genders">
+            <EntityTypeMapping TypeName="TerentievDataBaseModel.Gender">
+              <MappingFragment StoreEntitySet="Gender">
+                <ScalarProperty Name="GenderName" ColumnName="GenderName" />
+                <ScalarProperty Name="idGender" ColumnName="idGender" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -219,6 +398,16 @@
                 <ScalarProperty Name="Date" ColumnName="Date" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="idProduct" ColumnName="idProduct" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Providers">
+            <EntityTypeMapping TypeName="TerentievDataBaseModel.Provider">
+              <MappingFragment StoreEntitySet="Provider">
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="idProvider" ColumnName="idProvider" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

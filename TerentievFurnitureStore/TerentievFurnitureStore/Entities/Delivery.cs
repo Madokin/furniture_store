@@ -15,14 +15,22 @@ namespace TerentievFurnitureStore.Entities
 using System;
     using System.Collections.Generic;
     
-public partial class User
+public partial class Delivery
 {
 
-    public int idUser { get; set; }
+    public int idDeliveries { get; set; }
 
-    public string Login { get; set; }
+    public int idProvider { get; set; }
 
-    public string Password { get; set; }
+    public int idProduct { get; set; }
+
+    public System.DateTime DateOfDeliveries { get; set; }
+
+
+
+    public virtual Product Product { get; set; }
+
+    public virtual Provider Provider { get; set; }
 
 }
 

@@ -15,25 +15,21 @@ namespace TerentievFurnitureStore.Entities
 using System;
     using System.Collections.Generic;
     
-public partial class Client
+public partial class Provider
 {
 
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-    public Client()
+    public Provider()
     {
 
-        this.Sales = new HashSet<Sale>();
+        this.Deliveries = new HashSet<Delivery>();
 
     }
 
 
-    public int idClient { get; set; }
+    public int idProvider { get; set; }
 
     public string Name { get; set; }
-
-    public int idGender { get; set; }
-
-    public System.DateTime DateOfBirth { get; set; }
 
     public string Address { get; set; }
 
@@ -41,11 +37,9 @@ public partial class Client
 
 
 
-    public virtual Gender Gender { get; set; }
-
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
 
-    public virtual ICollection<Sale> Sales { get; set; }
+    public virtual ICollection<Delivery> Deliveries { get; set; }
 
 }
 

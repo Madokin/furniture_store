@@ -41,6 +41,9 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.mshtml, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
@@ -69,6 +72,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Entities\Delivery.cs">
+      <DependentUpon>ModelFurnitureStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Gender.cs">
+      <DependentUpon>ModelFurnitureStore.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Provider.cs">
+      <DependentUpon>ModelFurnitureStore.tt</DependentUpon>
+    </Compile>
     <Compile Include="Pages\PageAddClient.xaml.cs">
       <DependentUpon>PageAddClient.xaml</DependentUpon>
     </Compile>
@@ -83,6 +95,9 @@
     </Compile>
     <Compile Include="Pages\PageProducts.xaml.cs">
       <DependentUpon>PageProducts.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PageReport.xaml.cs">
+      <DependentUpon>PageReport.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\PageSales.xaml.cs">
       <DependentUpon>PageSales.xaml</DependentUpon>
@@ -120,6 +135,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\PageProducts.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PageReport.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

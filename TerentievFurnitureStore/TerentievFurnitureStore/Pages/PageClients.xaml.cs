@@ -43,17 +43,31 @@ namespace TerentievFurnitureStore.Pages
         private void UpdateData()
         {
             var clients = AppData.context.Clients.ToList();
-            if (DPSearch.SelectedDate != null)
+            if (CBxSearch.SelectedIndex != 0)
             {
-                clients = clients.Where(p => p.DateOfBirth == DPSearch.SelectedDate).ToList();
+                clients = clients.Where(p => p.Gender == CBxSearch.SelectedItem).ToList();
             }
             if (!TBxSearch.Text.Equals(""))
                 clients = clients.Where(p => p.Name.ToLower().Contains(TBxSearch.Text.ToLower())).ToList();
             if (clients.Count == 0)
-                DGClients.Visibility = Visibility.Hidden;
+            {
+                TBNothing.Visibility = Visibility.Visible;
+                SVDataGrid.Visibility = Visibility.Hidden;
+            }
             else
-                DGClients.Visibility = Visibility.Visible;
-            DGClients.ItemsSource = clients;
+            {
+                TBNothing.Visibility = Visibility.Hidden;
+                SVDataGrid.Visibility = Visibility.Visible;
+                DGClients.ItemsSource = clients;
+            }
+            if (clients.Count>6)
+            {
+                SVDataGrid.VerticalScrollBarVisibility = ScrollBarVisibility.Visible;
+            }
+            else
+            {
+                SVDataGrid.VerticalScrollBarVisibility = ScrollBarVisibility.Hidden;
+            }
         }
 
         private void Page_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
@@ -79,16 +93,16 @@ namespace TerentievFurnitureStore.Pages
             UpdateData();
         }
 
-        private void DPSearch_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
+        private void BtnAddClient_Click(object sender, RoutedEventArgs e)
         {
+            AppData.WindowAdd = new WindowAddEdit(new PageAddClient());
+            AppData.WindowAdd.ShowDialog();
             UpdateData();
         }
 
-        private void BtnResetFilter_Click(object sender, RoutedEventArgs e)
+        private void DPSearch_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            DPSearch.SelectedDate = null;
-            UpdateData();
-        }
 
+        }
     }
 }

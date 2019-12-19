@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:TerentievFurnitureStore.Windows"
         xmlns:prop ="clr-namespace:TerentievFurnitureStore.Properties"
         mc:Ignorable="d"
-        Title="{x:Static prop:Resources.TitleFurnitureStore}" Height="600" Width="800" MinHeight="650" MinWidth="850" Closed="Window_Closed">
+        Title="{x:Static prop:Resources.TitleFurnitureStore}" Height="600" Width="850" MinHeight="650" MinWidth="850" Closed="Window_Closed">
     <Grid Background="LightGreen">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="80"/>

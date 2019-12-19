@@ -351,4 +351,16 @@
   <data name="TextSearchByNameOrPN" xml:space="preserve">
     <value>Search by name or product name :</value>
   </data>
+  <data name="DGGender" xml:space="preserve">
+    <value>Gender</value>
+  </data>
+  <data name="TextGender" xml:space="preserve">
+    <value>Gender :</value>
+  </data>
+  <data name="BtnGenerate" xml:space="preserve">
+    <value>Generate</value>
+  </data>
+  <data name="BtnPrint" xml:space="preserve">
+    <value>Print</value>
+  </data>
 </root>

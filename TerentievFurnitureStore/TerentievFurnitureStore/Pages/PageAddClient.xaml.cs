@@ -26,11 +26,8 @@ namespace TerentievFurnitureStore.Pages
         {
             InitializeComponent();
             _cc = currentClient;
-            TBxName.Text = _cc.Name;
-            DPDateOfBirth.SelectedDate = _cc.DateOfBirth;
-            TBxAddress.Text = _cc.Address;
-            MaskTBxPhoneNumber.Text = _cc.Phone;
             BtnAddEdit.Content = Properties.Resources.BtnEdit;
+
         }
 
         public PageAddClient()
@@ -89,6 +86,21 @@ namespace TerentievFurnitureStore.Pages
             {
                 MessageBox.Show(Properties.Resources.ErrorUnspecified + ex.Message, Properties.Resources.CaptionError,
                     MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            CBxGender.ItemsSource = AppData.context.Genders.ToList();
+            CBxGender.SelectedIndex = 0;
+            if (_cc!=null)
+            {
+                TBxName.Text = _cc.Name;
+                DPDateOfBirth.SelectedDate = _cc.DateOfBirth;
+                CBxGender.SelectedItem = _cc.Gender;
+                TBxAddress.Text = _cc.Address;
+                MaskTBxPhoneNumber.Text = _cc.Phone;
+                BtnAddEdit.Content = Properties.Resources.BtnEdit;
             }
         }
     }

@@ -17,9 +17,6 @@
                 <Button Name="BtnSales"  Height="60" Width="300" Content="{x:Static prop:Resources.BtnSales}" TextBlock.FontSize="24" Click="BtnSales_Click"></Button>
             </StackPanel>
             <StackPanel>
-                <Button Name="BtnAddClient" Height="60" Width="300" Content="{x:Static prop:Resources.BtnAddClient}" TextBlock.FontSize="24" Click="BtnAddClient_Click"></Button>
-                <Button Name="BtnAddProduct" Height="60" Width="300" Content="{x:Static prop:Resources.BtnAddProduct}" TextBlock.FontSize="24" Click="BtnAddProduct_Click"></Button>
-                <Button Name="BtnAddSale" Height="60" Width="300" Content="{x:Static prop:Resources.BtnAddSale}" TextBlock.FontSize="24" Click="BtnAddSale_Click"></Button>
             </StackPanel>
         </StackPanel>
     </Grid>
